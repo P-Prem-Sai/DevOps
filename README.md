@@ -1,14 +1,14 @@
 # 🚀 DevOps / Platform Engineering Roadmap
 
-A structured roadmap to build **in-depth knowledge of Linux, Networking, Containers, Kubernetes, Cloud, Infrastructure as Code, CI/CD, GitOps, Observability, and System Design**.
+A structured roadmap to build **in-depth knowledge of Linux, Networking, Containers, Kubernetes, Cloud, Infrastructure as Code, CI/CD, GitOps, Observability, Security, Cost Optimization, Disaster Recovery, and System Design**.
 
-The goal is to move from **using individual tools** to understanding how they work internally, how they fit together, and how to design and troubleshoot production systems.
+The goal is to move from **using individual tools** to understanding how they work internally, how they fit together, and how to design, secure, optimize, and troubleshoot production systems.
 
 ---
 
 # 🗺️ Learning Path
 
-```text
+```text id="y3j7f8"
 Linux
   ↓
 Networking
@@ -32,6 +32,15 @@ GitOps (ArgoCD)
 Prometheus + Grafana
   ↓
 System Design
+
+          ┌─────────────────────────────┐
+          │ Optional Advanced Topics   │
+          │                             │
+          │ DevSecOps                   │
+          │ FinOps                      │
+          │ Disaster Recovery           │
+          │ Chaos Engineering            │
+          └─────────────────────────────┘
 ```
 
 ---
@@ -230,16 +239,6 @@ Build a strong understanding of networking before moving into Docker and Kuberne
 * [ ] `nc`
 * [ ] `tcpdump`
 
-### Troubleshooting Scenarios
-
-* [ ] DNS resolution failure
-* [ ] Connection timeout
-* [ ] Connection refused
-* [ ] Port blocked
-* [ ] Routing failure
-* [ ] TLS certificate failure
-* [ ] Application reachable locally but not remotely
-
 ---
 
 # 🐳 3. Docker
@@ -308,17 +307,6 @@ Understand containers from both the practical and internal Linux perspective.
 * [ ] Volumes
 * [ ] Environment configuration
 
-### Practice
-
-* [ ] Containerize Flask application
-* [ ] Create multi-container application
-* [ ] Configure networking
-* [ ] Configure persistent storage
-* [ ] Add health checks
-* [ ] Optimize Dockerfile
-* [ ] Run containers as non-root
-* [ ] Debug container failures
-
 ---
 
 # 🐍 4. Python + Bash Scripting
@@ -326,8 +314,6 @@ Understand containers from both the practical and internal Linux perspective.
 ## Goal
 
 Build practical automation skills for DevOps, Cloud, CI/CD, Kubernetes, and infrastructure troubleshooting.
-
----
 
 ## Bash
 
@@ -344,30 +330,6 @@ Build practical automation skills for DevOps, Cloud, CI/CD, Kubernetes, and infr
 * [ ] Pipes
 * [ ] Redirection
 
-### Commands
-
-```bash
-grep
-awk
-sed
-cut
-sort
-uniq
-xargs
-find
-jq
-curl
-wget
-ps
-top
-df
-du
-ss
-ip
-systemctl
-journalctl
-```
-
 ### Automation
 
 * [ ] Service health checks
@@ -377,8 +339,6 @@ journalctl
 * [ ] Deployment scripts
 * [ ] Backup scripts
 * [ ] System monitoring scripts
-
----
 
 ## Python
 
@@ -421,15 +381,6 @@ journalctl
 * [ ] API interaction
 * [ ] Resource monitoring
 * [ ] Automation scripts
-
-### Practice
-
-* [ ] Log analyzer
-* [ ] Server health checker
-* [ ] API automation
-* [ ] AWS resource inventory script
-* [ ] Kubernetes resource checker
-* [ ] Deployment automation script
 
 ---
 
@@ -515,20 +466,19 @@ Understand Kubernetes architecture, orchestration, networking, storage, scheduli
 * [ ] DNS failures
 * [ ] Network failures
 
-### Important Commands
+### Optional — Disaster Recovery & Backup
 
-```bash
-kubectl get
-kubectl describe
-kubectl logs
-kubectl exec
-kubectl apply
-kubectl delete
-kubectl rollout
-kubectl scale
-kubectl top
-kubectl get events
-```
+* [ ] Multi-AZ architectures
+* [ ] Multi-Region architectures
+* [ ] Kubernetes state backups using Velero
+* [ ] Database backup and restore
+* [ ] RDS snapshot restores
+* [ ] Backup validation
+* [ ] Disaster recovery testing
+* [ ] Game Days
+* [ ] Chaos Engineering
+* [ ] RTO (Recovery Time Objective)
+* [ ] RPO (Recovery Point Objective)
 
 ---
 
@@ -567,46 +517,21 @@ Learn Infrastructure as Code and provision infrastructure reproducibly instead o
 * [ ] Module outputs
 * [ ] Module composition
 
-### Commands
+### Optional — Infrastructure Security
 
-```bash
-terraform init
-terraform validate
-terraform fmt
-terraform plan
-terraform apply
-terraform destroy
-terraform state
-terraform import
-```
+* [ ] Shift-Left Infrastructure Security
+* [ ] IaC security scanning
+* [ ] Checkov
+* [ ] tfsec
+* [ ] Terraform security best practices
+* [ ] Least-privilege IAM
+* [ ] Secrets management
 
-### Practice
+### Optional — Cost Estimation
 
-Provision using Terraform:
-
-```text
-VPC
- ↓
-Subnets
- ↓
-Route Tables
- ↓
-Security Groups
- ↓
-IAM
- ↓
-EC2
- ↓
-S3
-```
-
-Later:
-
-```text
-Terraform
-    ↓
-EKS
-```
+* [ ] Terraform cost estimation
+* [ ] Infracost
+* [ ] Cost-aware infrastructure design
 
 ---
 
@@ -614,7 +539,7 @@ EKS
 
 ## Goal
 
-Understand AWS infrastructure deeply enough to design, provision, secure, monitor, and troubleshoot production systems.
+Understand AWS infrastructure deeply enough to design, provision, secure, monitor, optimize, and troubleshoot production systems.
 
 ### AWS Fundamentals
 
@@ -683,13 +608,41 @@ Understand AWS infrastructure deeply enough to design, provision, secure, monito
 * [ ] ECR
 * [ ] EKS
 
+### Optional — FinOps & Cost Optimization
+
+* [ ] AWS Cost Explorer
+* [ ] AWS Billing
+* [ ] Billing Alarms
+* [ ] Cost allocation tags
+* [ ] On-Demand vs Reserved Instances
+* [ ] Spot Instances
+* [ ] Right-sizing
+* [ ] S3 storage class optimization
+* [ ] Storage lifecycle policies
+* [ ] NAT Gateway cost optimization
+* [ ] Data transfer cost optimization
+* [ ] Cost-aware architecture
+
+### Optional — Disaster Recovery
+
+* [ ] Multi-AZ architecture
+* [ ] Multi-Region architecture
+* [ ] AWS Backup
+* [ ] RDS snapshots
+* [ ] RDS restore
+* [ ] Cross-region backups
+* [ ] Failover strategies
+* [ ] RTO
+* [ ] RPO
+* [ ] Disaster recovery testing
+
 ---
 
 # ☸️ 8. EKS
 
 ## Goal
 
-Understand how Kubernetes integrates with AWS networking, IAM, load balancing, storage, and security.
+Understand how Kubernetes integrates with AWS networking, IAM, load balancing, storage, security, scaling, and cost management.
 
 ### Architecture
 
@@ -721,22 +674,16 @@ Understand how Kubernetes integrates with AWS networking, IAM, load balancing, s
 * [ ] Load Balancers
 * [ ] CloudWatch
 
-### Security
+### Optional — EKS Cost Optimization
 
-* [ ] EKS RBAC
-* [ ] IAM
-* [ ] NetworkPolicy
-* [ ] Secrets
-
-### Troubleshooting
-
-* [ ] Pod scheduling
-* [ ] Networking failures
-* [ ] IAM failures
-* [ ] Image pull failures
-* [ ] Load Balancer failures
-* [ ] Node failures
-* [ ] DNS failures
+* [ ] Cluster Autoscaler
+* [ ] Karpenter
+* [ ] Spot Instances
+* [ ] Node right-sizing
+* [ ] Workload resource optimization
+* [ ] Scale-to-zero strategies
+* [ ] Kubecost
+* [ ] Kubernetes resource cost analysis
 
 ---
 
@@ -777,20 +724,42 @@ Build secure and production-grade CI pipelines and understand how CI integrates 
 * [ ] Dependency security
 * [ ] Container scanning
 
+### Optional — DevSecOps / Shift-Left Security
+
+* [ ] Shift-Left Security
+* [ ] SAST — Static Application Security Testing
+* [ ] SCA — Software Composition Analysis
+* [ ] Container scanning
+* [ ] Trivy
+* [ ] Infrastructure as Code scanning
+* [ ] Checkov
+* [ ] tfsec
+* [ ] Software Bill of Materials (SBOM)
+* [ ] SBOM generation
+* [ ] Dependency vulnerability scanning
+* [ ] Secret scanning
+* [ ] Security gates in CI/CD
+
 ### CI Pipeline
 
-```text
+```text id="n1grd5"
 Pull Request
       ↓
 Lint
       ↓
 Unit Tests
       ↓
-Build
+SAST
       ↓
-Security Scan
+Dependency Scan
+      ↓
+IaC Scan
       ↓
 Docker Build
+      ↓
+Container Scan
+      ↓
+SBOM Generation
       ↓
 Push Image → ECR
 ```
@@ -805,7 +774,7 @@ Understand modern Kubernetes Continuous Delivery using a **pull-based GitOps mod
 
 ### GitOps Fundamentals
 
-* [ ] What is GitOps?
+* [ ] GitOps
 * [ ] Push vs Pull deployment
 * [ ] Desired State
 * [ ] Declarative Configuration
@@ -830,14 +799,14 @@ Understand modern Kubernetes Continuous Delivery using a **pull-based GitOps mod
 
 ### GitOps Pipeline
 
-```text
+```text id="3zj2kb"
 Developer
     ↓
 Git Repository
     ↓
 GitHub Actions
     ↓
-Build + Test
+Build + Test + Security
     ↓
 Docker Image
     ↓
@@ -851,17 +820,6 @@ ArgoCD
     ↓
 Kubernetes / EKS
 ```
-
-### Practice
-
-* [ ] Deploy ArgoCD
-* [ ] Connect Git repository
-* [ ] Deploy application using ArgoCD
-* [ ] Enable automatic sync
-* [ ] Introduce configuration drift
-* [ ] Observe reconciliation
-* [ ] Perform rollback
-* [ ] Manage multiple environments
 
 ---
 
@@ -903,7 +861,7 @@ Build production-level observability for infrastructure and Kubernetes applicati
 
 ### Monitor
 
-```text
+```text id="xkz6wo"
 CPU
 Memory
 Disk
@@ -916,15 +874,14 @@ Container Health
 Kubernetes Resources
 ```
 
-### Practice
+### Optional — Advanced Observability
 
-* [ ] Deploy Prometheus
-* [ ] Deploy Grafana
-* [ ] Monitor Kubernetes
-* [ ] Create dashboards
-* [ ] Create alerts
-* [ ] Monitor application metrics
-* [ ] Investigate production-like incidents
+* [ ] Distributed tracing
+* [ ] OpenTelemetry
+* [ ] Trace context propagation
+* [ ] Correlation between logs, metrics, and traces
+* [ ] SLO-based alerting
+* [ ] Error budgets
 
 ---
 
@@ -932,7 +889,7 @@ Kubernetes Resources
 
 ## Goal
 
-Learn to design scalable, reliable, secure, observable, and cost-effective production systems.
+Learn to design scalable, reliable, secure, observable, cost-efficient, and fault-tolerant production systems.
 
 ### Fundamentals
 
@@ -972,15 +929,163 @@ Learn to design scalable, reliable, secure, observable, and cost-effective produ
 * [ ] Backpressure
 * [ ] Leader Election
 
-### DevOps / Platform System Design
+### Optional — Production Architecture
 
-* [ ] CI/CD Platform
-* [ ] Container Deployment Platform
-* [ ] Kubernetes Platform
-* [ ] Log Aggregation System
-* [ ] Monitoring Platform
-* [ ] Internal Developer Platform
-* [ ] Infrastructure Provisioning Platform
+* [ ] High Availability
+* [ ] Multi-AZ
+* [ ] Multi-Region
+* [ ] Disaster Recovery
+* [ ] Backup strategies
+* [ ] RTO / RPO
+* [ ] Chaos Engineering
+* [ ] Failure isolation
+* [ ] Graceful degradation
+* [ ] Cost-aware architecture
+* [ ] Security architecture
+
+---
+
+# 🔐 13. Optional — DevSecOps
+
+> Advanced track for building security into the platform rather than treating security as a separate final step.
+
+### Application Security
+
+* [ ] Shift-Left Security
+* [ ] SAST
+* [ ] SCA
+* [ ] Dependency scanning
+* [ ] Secret scanning
+* [ ] SBOM
+* [ ] Vulnerability management
+
+### Container Security
+
+* [ ] Trivy
+* [ ] Image scanning
+* [ ] Minimal base images
+* [ ] Non-root containers
+* [ ] Container capabilities
+* [ ] Runtime security
+
+### Kubernetes Security
+
+* [ ] RBAC
+* [ ] NetworkPolicy
+* [ ] Pod Security
+* [ ] Secrets management
+* [ ] Admission Controllers
+* [ ] Image policies
+* [ ] Workload identity
+
+### Infrastructure Security
+
+* [ ] Checkov
+* [ ] tfsec
+* [ ] Terraform security practices
+* [ ] IAM least privilege
+* [ ] Security Groups
+* [ ] Encryption
+* [ ] Key management
+
+---
+
+# 💰 14. Optional — FinOps & Cost Management
+
+> Advanced track for designing infrastructure that is not only scalable and reliable, but also cost-efficient.
+
+### AWS Cost Management
+
+* [ ] AWS Cost Explorer
+* [ ] AWS Billing
+* [ ] Billing Alarms
+* [ ] Cost allocation tags
+* [ ] AWS Budgets
+* [ ] Cost anomaly detection
+
+### Compute Optimization
+
+* [ ] On-Demand Instances
+* [ ] Reserved Instances
+* [ ] Savings Plans
+* [ ] Spot Instances
+* [ ] Right-sizing
+* [ ] Auto Scaling
+
+### Kubernetes Cost Optimization
+
+* [ ] Cluster Autoscaler
+* [ ] Karpenter
+* [ ] Resource requests optimization
+* [ ] Resource limits optimization
+* [ ] Scale-to-zero
+* [ ] Spot workloads
+* [ ] Kubecost
+
+### Infrastructure Cost Estimation
+
+* [ ] Infracost
+* [ ] Terraform cost estimation
+* [ ] Cost-aware pull requests
+* [ ] Cost impact of architecture decisions
+
+### Storage Optimization
+
+* [ ] S3 storage classes
+* [ ] S3 lifecycle policies
+* [ ] EBS optimization
+* [ ] Snapshot management
+
+### Network Cost Optimization
+
+* [ ] NAT Gateway costs
+* [ ] Data transfer costs
+* [ ] Cross-AZ traffic
+* [ ] Cross-region traffic
+* [ ] CDN optimization
+
+---
+
+# 🛡️ 15. Optional — Disaster Recovery & Chaos Engineering
+
+> Advanced track for handling catastrophic failures rather than only individual component failures.
+
+### Disaster Recovery
+
+* [ ] RTO
+* [ ] RPO
+* [ ] Backup strategies
+* [ ] Restore strategies
+* [ ] Multi-AZ
+* [ ] Multi-Region
+* [ ] Failover
+* [ ] Failback
+
+### Kubernetes DR
+
+* [ ] Velero
+* [ ] Kubernetes state backup
+* [ ] Persistent volume backup
+* [ ] Cluster recovery
+* [ ] Application recovery
+
+### Database DR
+
+* [ ] RDS snapshots
+* [ ] Point-in-time recovery
+* [ ] Cross-region replication
+* [ ] Database restore testing
+
+### Chaos Engineering
+
+* [ ] Failure injection
+* [ ] Pod failures
+* [ ] Node failures
+* [ ] Network failures
+* [ ] Dependency failures
+* [ ] Resource exhaustion
+* [ ] Game Days
+* [ ] Recovery validation
 
 ---
 
@@ -988,7 +1093,7 @@ Learn to design scalable, reliable, secure, observable, and cost-effective produ
 
 Build one complete production-like platform that combines everything.
 
-```text
+```text id="w9m6hh"
                               GitHub
                                 │
                                 ▼
@@ -1002,6 +1107,11 @@ Build one complete production-like platform that combines everything.
                                 ▼
                              Docker
                                 │
+                       ┌────────┴────────┐
+                       │                 │
+                  Trivy Scan           SBOM
+                       │                 │
+                       └────────┬────────┘
                                 ▼
                               ECR
                                 │
@@ -1048,7 +1158,111 @@ Logs
   │
   ▼
 CloudWatch
+
+
+Security
+   │
+   ├── SAST
+   ├── Trivy
+   ├── Checkov
+   ├── SBOM
+   └── IAM
+
+
+Cost
+   │
+   ├── Infracost
+   ├── Kubecost
+   └── AWS Cost Explorer
 ```
+
+---
+
+## 📋 Project README Requirements
+
+The final project should have a **world-class README** that demonstrates engineering thinking, not just tool usage.
+
+### Architecture
+
+* [ ] High-level architecture diagram
+* [ ] Detailed architecture diagram
+* [ ] Mermaid diagrams
+* [ ] Draw.io diagrams
+* [ ] Network architecture
+* [ ] CI/CD architecture
+* [ ] GitOps architecture
+* [ ] Observability architecture
+
+### Engineering Decisions
+
+* [ ] Why I chose this stack
+* [ ] Technology trade-offs
+* [ ] Architecture decisions
+* [ ] Decision logs
+* [ ] Alternatives considered
+
+### Setup
+
+* [ ] Prerequisites
+* [ ] Local setup instructions
+* [ ] AWS setup
+* [ ] Terraform setup
+* [ ] Kubernetes setup
+* [ ] ArgoCD setup
+* [ ] Monitoring setup
+
+### CI/CD
+
+* [ ] CI/CD flow visualization
+* [ ] Build process
+* [ ] Testing process
+* [ ] Security scanning
+* [ ] Image publishing
+* [ ] GitOps deployment
+* [ ] Rollback process
+
+### Security
+
+* [ ] Threat model
+* [ ] IAM design
+* [ ] Secrets management
+* [ ] Container security
+* [ ] IaC security
+* [ ] Vulnerability scanning
+
+### Reliability
+
+* [ ] High Availability
+* [ ] Failure scenarios
+* [ ] Disaster Recovery
+* [ ] Backup strategy
+* [ ] RTO / RPO
+* [ ] Recovery procedures
+
+### Failure Scenarios
+
+Document what happens when:
+
+* [ ] Worker node dies
+* [ ] Pod crashes
+* [ ] Application becomes unhealthy
+* [ ] Database becomes unavailable
+* [ ] AWS service becomes unavailable
+* [ ] Container image is corrupted
+* [ ] Deployment fails
+* [ ] GitOps synchronization fails
+* [ ] Network connectivity fails
+* [ ] Region becomes unavailable
+
+### Cost
+
+* [ ] AWS monthly cost estimate
+* [ ] Terraform cost estimation
+* [ ] EKS cost analysis
+* [ ] Storage costs
+* [ ] Network costs
+* [ ] Cost optimization decisions
+* [ ] Cost trade-offs
 
 ---
 
@@ -1064,9 +1278,11 @@ For every technology and concept, answer these seven questions:
 6. **How do I troubleshoot it?**
 7. **How is it used in production?**
 
-The goal is not to memorize commands.
+For advanced topics, add:
 
-The goal is to understand **why the system works and what happens when it doesn't**.
+8. **How secure is it?**
+9. **How much does it cost?**
+10. **How does it recover from failure?**
 
 ---
 
@@ -1110,7 +1326,7 @@ Use **Bash** for:
 
 ### Language Strategy
 
-```text
+```text id="gl0v9j"
                 Interview Coding
                        │
                      Java
@@ -1148,7 +1364,11 @@ After completing this roadmap, the target is to be able to:
 * [ ] Deploy and manage EKS
 * [ ] Build secure GitHub Actions CI pipelines
 * [ ] Implement GitOps using ArgoCD
-* [ ] Monitor infrastructure using Prometheus and Grafana
+* [ ] Monitor systems using Prometheus and Grafana
+* [ ] Implement DevSecOps practices
+* [ ] Analyze and optimize cloud costs
+* [ ] Design disaster recovery strategies
+* [ ] Perform failure and recovery testing
 * [ ] Troubleshoot production-like failures
 * [ ] Design scalable distributed systems
 * [ ] Solve DSA problems using Java
@@ -1170,7 +1390,7 @@ After completing this roadmap, the target is to be able to:
 
 # 📌 Core Principle
 
-```text
+```text id="8j0hkw"
 Don't just learn the tool.
 
 Understand:
@@ -1183,11 +1403,283 @@ How?
  ↓
 Internals
  ↓
+Security
+ ↓
+Cost
+ ↓
 Failure Modes
+ ↓
+Recovery
  ↓
 Troubleshooting
  ↓
 Production Architecture
 ```
 
-**Learn deeply. Build everything. Break everything. Fix everything.**
+**Learn deeply. Build everything. Break everything. Fix everything. Optimize everything.**
+
+**************************************************************************************************
+**************************************************************************************************
+**************************************************************************************************
+
+# ⭐ Optional — Senior / FAANG-Tier Extensions
+
+These topics are **optional advanced areas** to study after completing the core roadmap.
+
+They focus on areas that become increasingly important for senior-level Platform Engineering, DevOps, SRE, and Cloud roles:
+
+```text
+Core Roadmap
+     │
+     ├── Security
+     │
+     ├── Cost Optimization
+     │
+     └── Disaster Recovery
+```
+
+---
+
+# 🔐 Optional: DevSecOps
+
+Security should be integrated directly into the development and infrastructure lifecycle rather than being treated as a separate final-stage activity.
+
+## Shift-Left Security
+
+* [ ] Shift-Left Security
+* [ ] SAST (Static Application Security Testing)
+* [ ] Container scanning with Trivy
+* [ ] Infrastructure as Code scanning with Checkov / tfsec
+* [ ] Software Bill of Materials (SBOM) generation
+* [ ] Dependency vulnerability scanning
+* [ ] Secret scanning
+* [ ] Image signing
+* [ ] Supply-chain security
+* [ ] Software supply-chain attacks
+* [ ] Least-privilege CI/CD
+* [ ] Secure GitHub Actions workflows
+
+### Security Pipeline
+
+```text
+Code
+ ↓
+SAST
+ ↓
+Dependency Scan
+ ↓
+IaC Scan
+ ↓
+Docker Build
+ ↓
+Container Scan
+ ↓
+SBOM
+ ↓
+Image Registry
+ ↓
+Deployment
+```
+
+---
+
+# 💰 Optional: FinOps & Cost Optimization
+
+At scale, Platform Engineers need to consider not only whether infrastructure works, but also whether it is **cost-efficient**.
+
+### FinOps & Cost Optimization
+
+* [ ] AWS Cost Explorer & Billing Alarms
+* [ ] AWS Budgets
+* [ ] Spot Instances vs On-Demand vs Reserved
+* [ ] EKS Cluster Autoscaler
+* [ ] Karpenter
+* [ ] Scale-to-zero concepts
+* [ ] Estimating Terraform costs with Infracost
+* [ ] Monitoring Kubernetes costs with Kubecost
+* [ ] S3 storage class transitions for cost savings
+* [ ] Right-sizing EC2 instances
+* [ ] Right-sizing Kubernetes resources
+* [ ] Cost allocation and tagging
+* [ ] Cost-aware architecture
+
+### Cost Optimization Mindset
+
+```text
+Architecture
+     ↓
+Resource Selection
+     ↓
+Capacity Planning
+     ↓
+Autoscaling
+     ↓
+Monitoring
+     ↓
+Cost Analysis
+     ↓
+Optimization
+```
+
+---
+
+# 🛡️ Optional: Disaster Recovery & Backup
+
+Production systems need to survive not only individual component failures but also large-scale infrastructure failures.
+
+## Kubernetes
+
+* [ ] Multi-AZ architectures
+* [ ] Multi-Region architectures
+* [ ] Kubernetes state backups using Velero
+* [ ] Cluster recovery
+* [ ] Persistent volume recovery
+* [ ] Application state recovery
+
+## AWS
+
+* [ ] RDS / Database snapshot restores
+* [ ] S3 backup and recovery
+* [ ] Cross-region replication
+* [ ] Multi-Region architecture
+* [ ] Route 53 failover
+* [ ] Disaster recovery architecture
+
+## DR Concepts
+
+* [ ] RTO (Recovery Time Objective)
+* [ ] RPO (Recovery Point Objective)
+* [ ] Backup vs Replication
+* [ ] Active-Active
+* [ ] Active-Passive
+* [ ] Pilot Light
+* [ ] Warm Standby
+* [ ] Backup and Restore
+* [ ] Testing backups
+* [ ] Game Days
+* [ ] Chaos Engineering
+
+### Disaster Recovery Flow
+
+```text
+Failure
+   ↓
+Detection
+   ↓
+Decision
+   ↓
+Failover / Recovery
+   ↓
+Restore
+   ↓
+Validation
+   ↓
+Service Recovery
+```
+
+---
+
+# 🏆 Optional: Final Project — World-Class README
+
+The final project should demonstrate not only that the system works, but also that you understand the **architecture, trade-offs, security, reliability, cost, and failure scenarios**.
+
+## Project README Requirements
+
+* [ ] High-level Architecture Diagram
+* [ ] Architecture diagram using Mermaid or Draw.io
+* [ ] "Why I chose this stack"
+* [ ] Architecture trade-offs
+* [ ] Decision logs
+* [ ] Prerequisites
+* [ ] Step-by-step local setup instructions
+* [ ] Infrastructure setup instructions
+* [ ] CI/CD Flow visualization
+* [ ] GitOps Flow visualization
+* [ ] Security architecture
+* [ ] Observability architecture
+* [ ] "Failure Scenarios" section
+* [ ] Explain what happens if a worker node dies
+* [ ] Explain what happens if a Pod crashes
+* [ ] Explain what happens if an AZ fails
+* [ ] Explain what happens if the database becomes unavailable
+* [ ] Explain how the system recovers
+* [ ] Disaster Recovery strategy
+* [ ] RTO / RPO targets
+* [ ] Cost breakdown
+* [ ] Estimated monthly AWS cost
+* [ ] Cost optimization decisions
+* [ ] Performance considerations
+* [ ] Security considerations
+* [ ] Troubleshooting guide
+* [ ] Lessons learned
+
+### Example Failure Scenario
+
+```text
+Worker Node Failure
+        ↓
+Kubernetes detects node failure
+        ↓
+Pods become unavailable
+        ↓
+Deployment Controller
+        ↓
+Scheduler selects another healthy node
+        ↓
+Pod recreated
+        ↓
+Readiness Probe passes
+        ↓
+Service receives traffic
+```
+
+---
+
+# 🎯 Optional Advanced Learning Principle
+
+These topics should be approached after the corresponding core technology is understood.
+
+```text
+Kubernetes
+    ↓
+Kubernetes Security
+    ↓
+Kubernetes DR
+    ↓
+Kubernetes Cost Optimization
+
+
+Terraform
+    ↓
+IaC Security
+    ↓
+IaC Cost Estimation
+
+
+GitHub Actions
+    ↓
+DevSecOps
+    ↓
+Secure CI/CD
+
+
+AWS
+    ↓
+FinOps
+    ↓
+Disaster Recovery
+```
+
+The optional topics are intended to move the roadmap from:
+
+```text
+"I can use DevOps tools."
+```
+
+to:
+
+```text
+"I can design secure, reliable, scalable,
+observable and cost-efficient platforms."
+```
+
