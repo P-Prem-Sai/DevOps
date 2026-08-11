@@ -51,7 +51,7 @@ Learn the basic concepts required to understand Linux.
 * Absolute and relative paths
 * Linux directory structure
 
-[Learn Linux Fundamentals →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/01-linux-fundamentals/README.md)
+[Learn Linux Fundamentals →](./01-linux-fundamentals/README.md)
 
 ---
 
@@ -72,7 +72,7 @@ Learn the commands used for everyday Linux administration and development.
 
 Important commands include:
 
-```text
+```bash
 pwd
 ls
 cd
@@ -96,7 +96,7 @@ wc
 xargs
 ```
 
-[Learn Essential Commands →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/02-essential-commands/README.md)
+[Learn Essential Commands →](./02-essential-commands/README.md)
 
 ---
 
@@ -119,7 +119,7 @@ Understand Linux's security and access-control model.
 * `/etc/group`
 * `/etc/shadow`
 
-[Learn Files & Permissions →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/03-files-and-permissions/README.md)
+[Learn Files & Permissions →](./03-files-and-permissions/README.md)
 
 ---
 
@@ -139,7 +139,7 @@ Understand how Linux executes and manages programs.
 
 Important commands:
 
-```text
+```bash
 ps
 top
 htop
@@ -152,7 +152,7 @@ nice
 renice
 ```
 
-[Learn Processes →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/04-processes/README.md)
+[Learn Processes →](./04-processes/README.md)
 
 ---
 
@@ -174,7 +174,7 @@ Learn how to automate Linux tasks using the shell.
 * Shell scripting
 * Debugging Bash scripts
 
-[Learn Shell & Bash →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/05-shell-and-bash/README.md)
+[Learn Shell & Bash →](./05-shell-and-bash/README.md)
 
 ---
 
@@ -192,7 +192,7 @@ Understand how software is installed and managed in Linux.
 * Dependencies
 * Repository configuration
 
-[Learn Package Management →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/06-package-management/README.md)
+[Learn Package Management →](./06-package-management/README.md)
 
 ---
 
@@ -215,7 +215,7 @@ Understand how Linux communicates over networks.
 
 Important commands:
 
-```text
+```bash
 ip
 ss
 ping
@@ -228,7 +228,7 @@ ssh
 scp
 ```
 
-[Learn Linux Networking →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/07-networking/README.md)
+[Learn Linux Networking →](./07-networking/README.md)
 
 ---
 
@@ -249,7 +249,7 @@ Understand how Linux manages disks and storage.
 * `lsblk`
 * LVM basics
 
-[Learn Storage & Filesystems →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/08-storage/README.md)
+[Learn Storage & Filesystems →](./08-storage/README.md)
 
 ---
 
@@ -268,7 +268,7 @@ Learn how Linux starts, manages, and monitors services.
 * Timers
 * Cron jobs
 
-[Learn System Management →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/09-system-management/README.md)
+[Learn System Management →](./09-system-management/README.md)
 
 ---
 
@@ -291,7 +291,7 @@ Go deeper into how Linux works internally.
 * Inter-process communication
 * Context switching
 
-[Learn Linux Internals →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/10-linux-internals/README.md)
+[Learn Linux Internals →](./10-linux-internals/README.md)
 
 ---
 
@@ -317,7 +317,7 @@ Apply Linux knowledge to real-world DevOps environments.
 * Linux and Docker
 * Linux and Kubernetes
 
-[Learn Linux for DevOps →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/11-linux-for-devops/README.md)
+[Learn Linux for DevOps →](./11-linux-for-devops/README.md)
 
 ---
 
