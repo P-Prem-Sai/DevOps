@@ -2,7 +2,7 @@
 
 Linux is one of the fundamental technologies for DevOps, cloud computing, containers, system administration, and backend engineering.
 
-The goal of this section is to develop a strong understanding of Linux from the fundamentals to advanced system concepts, with a particular focus on **practical usage, troubleshooting, and DevOps**.
+The goal of this section is to develop a strong understanding of Linux from the fundamentals to advanced system concepts, with a particular focus on **practical usage, troubleshooting, production systems, and DevOps**.
 
 ---
 
@@ -23,9 +23,16 @@ By the end of this section, I should be able to:
 * Read and analyze system and application logs.
 * Understand important Linux internals such as processes, memory, filesystems, and system calls.
 * Troubleshoot common Linux problems.
-* Understand the Linux concepts required for DevOps, containers, and cloud environments.
+* Understand advanced Linux security and access-control mechanisms.
+* Diagnose production issues using advanced tracing and monitoring tools.
+* Understand kernel configuration and performance tuning.
+* Understand Linux concepts required for Docker, Kubernetes, and cloud environments.
 
 ---
+
+# Core Linux
+
+The following topics form the **core Linux foundation** and should be completed first.
 
 ## Topics
 
@@ -44,7 +51,7 @@ Learn the basic concepts required to understand Linux.
 * Absolute and relative paths
 * Linux directory structure
 
-[Learn Linux Fundamentals →](./01-linux-fundamentals/README.md)
+[Learn Linux Fundamentals →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/01-linux-fundamentals/README.md)
 
 ---
 
@@ -89,7 +96,7 @@ wc
 xargs
 ```
 
-[Learn Essential Commands →](./02-essential-commands/README.md)
+[Learn Essential Commands →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/02-essential-commands/README.md)
 
 ---
 
@@ -112,7 +119,7 @@ Understand Linux's security and access-control model.
 * `/etc/group`
 * `/etc/shadow`
 
-[Learn Files & Permissions →](./03-files-and-permissions/README.md)
+[Learn Files & Permissions →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/03-files-and-permissions/README.md)
 
 ---
 
@@ -145,7 +152,7 @@ nice
 renice
 ```
 
-[Learn Processes →](./04-processes/README.md)
+[Learn Processes →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/04-processes/README.md)
 
 ---
 
@@ -167,7 +174,7 @@ Learn how to automate Linux tasks using the shell.
 * Shell scripting
 * Debugging Bash scripts
 
-[Learn Shell & Bash →](./05-shell-and-bash/README.md)
+[Learn Shell & Bash →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/05-shell-and-bash/README.md)
 
 ---
 
@@ -185,7 +192,7 @@ Understand how software is installed and managed in Linux.
 * Dependencies
 * Repository configuration
 
-[Learn Package Management →](./06-package-management/README.md)
+[Learn Package Management →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/06-package-management/README.md)
 
 ---
 
@@ -221,7 +228,7 @@ ssh
 scp
 ```
 
-[Learn Linux Networking →](./07-networking/README.md)
+[Learn Linux Networking →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/07-networking/README.md)
 
 ---
 
@@ -242,7 +249,7 @@ Understand how Linux manages disks and storage.
 * `lsblk`
 * LVM basics
 
-[Learn Storage & Filesystems →](./08-storage/README.md)
+[Learn Storage & Filesystems →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/08-storage/README.md)
 
 ---
 
@@ -261,7 +268,7 @@ Learn how Linux starts, manages, and monitors services.
 * Timers
 * Cron jobs
 
-[Learn System Management →](./09-system-management/README.md)
+[Learn System Management →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/09-system-management/README.md)
 
 ---
 
@@ -284,7 +291,7 @@ Go deeper into how Linux works internally.
 * Inter-process communication
 * Context switching
 
-[Learn Linux Internals →](./10-linux-internals/README.md)
+[Learn Linux Internals →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/10-linux-internals/README.md)
 
 ---
 
@@ -310,7 +317,117 @@ Apply Linux knowledge to real-world DevOps environments.
 * Linux and Docker
 * Linux and Kubernetes
 
-[Learn Linux for DevOps →](./11-linux-for-devops/README.md)
+[Learn Linux for DevOps →](https://chatgpt.com/g/g-p-6a7a1e158f3c819190fda10115b0bf33-devops/c/11-linux-for-devops/README.md)
+
+---
+
+# Advanced & Production Linux
+
+After completing the core topics, continue with the following advanced topics.
+
+These topics are especially useful for **production troubleshooting, system administration, containers, Kubernetes, security, and performance engineering**.
+
+### 12. Advanced Diagnostics & Tracing
+
+Learn how to investigate problems that cannot be diagnosed using basic tools such as `top` and `htop`.
+
+* `strace`
+* System call tracing
+* `sysstat`
+* `iostat`
+* `sar`
+* CPU analysis
+* Disk I/O analysis
+* Historical system metrics
+* Process-level troubleshooting
+* Diagnosing blocked or hanging applications
+
+[Learn Advanced Diagnostics →](./12-advanced-diagnostics/README.md)
+
+---
+
+### 13. Advanced Storage Management
+
+Go deeper into Linux storage administration.
+
+* LVM
+* Physical volumes
+* Volume groups
+* Logical volumes
+* Extending logical volumes
+* Filesystem resizing
+* Online storage expansion
+* NFS
+* SMB
+* Network-mounted filesystems
+* Shared storage
+* Storage troubleshooting
+
+[Learn Advanced Storage →](./13-advanced-storage/README.md)
+
+---
+
+### 14. Linux Security & Access Control
+
+Understand how Linux controls what users and applications are allowed to do.
+
+* SELinux
+* AppArmor
+* Mandatory Access Control (MAC)
+* Security contexts
+* Security policies
+* Permission denials
+* PAM
+* Authentication
+* Authorization
+* `iptables`
+* `nftables`
+* Linux firewall concepts
+* Container security basics
+
+[Learn Linux Security →](./14-security/README.md)
+
+---
+
+### 15. Kernel Tuning & Modern Observability
+
+Learn how Linux can be configured and observed at the kernel level.
+
+* `sysctl`
+* `/etc/sysctl.conf`
+* Kernel parameters
+* `vm.swappiness`
+* File descriptor limits
+* `fs.file-max`
+* TCP buffer configuration
+* Kernel performance tuning
+* eBPF
+* Kernel-level observability
+* eBPF-based networking and security
+* Relationship between eBPF and Kubernetes
+
+[Learn Kernel Tuning & Observability →](./15-kernel-and-observability/README.md)
+
+---
+
+### 16. Logging, Rotation & Auditing
+
+Go beyond basic `journalctl` usage and understand production logging.
+
+* `journalctl`
+* `logrotate`
+* Log rotation policies
+* Compression
+* Log retention
+* Log file management
+* Preventing disk exhaustion
+* `auditd`
+* Linux auditing
+* Tracking command execution
+* Tracking file access
+* Security auditing
+
+[Learn Logging & Auditing →](./16-logging-and-auditing/README.md)
 
 ---
 
@@ -326,10 +443,193 @@ Throughout the learning process, focus on practical tasks such as:
 * Monitoring CPU and memory usage.
 * Troubleshooting high CPU/memory usage.
 * Troubleshooting disk-space issues.
+* Troubleshooting inode exhaustion.
+* Troubleshooting disk I/O bottlenecks.
 * Troubleshooting network connectivity.
+* Tracing system calls using `strace`.
+* Monitoring historical system performance using `sar`.
+* Managing LVM storage.
+* Mounting and troubleshooting NFS storage.
+* Configuring Linux security policies.
+* Tuning kernel parameters.
 * Automating repetitive tasks with Bash.
 * Connecting to remote servers using SSH.
 * Deploying and managing applications.
+* Troubleshooting container-related Linux issues.
+
+---
+
+## Production Incident Scenarios
+
+Every topic should contain at least **one realistic production incident scenario**.
+
+The objective is to connect Linux theory with problems encountered in real production systems.
+
+Each topic README should contain a section similar to:
+
+```markdown
+## Production Incident Scenario
+
+### Problem
+
+Describe the production issue.
+
+### Symptoms
+
+What did the engineers observe?
+
+### Investigation
+
+Which Linux commands and tools were used?
+
+### Root Cause
+
+What actually caused the issue?
+
+### Resolution
+
+How was the problem fixed?
+
+### Prevention
+
+How could the issue be detected or prevented in the future?
+```
+
+Example:
+
+### Disk Space vs Inode Exhaustion
+
+A server reports:
+
+```text
+No space left on device
+```
+
+But:
+
+```bash
+df -h
+```
+
+shows that 50% of the disk is still available.
+
+Further investigation:
+
+```bash
+df -i
+```
+
+shows that the filesystem has exhausted its available inodes.
+
+The investigation should then identify which directories contain a very large number of files and determine why they were created.
+
+This teaches the difference between:
+
+```text
+Disk capacity
+    ↓
+df -h
+
+vs.
+
+Filesystem inode capacity
+    ↓
+df -i
+```
+
+The goal is to develop the ability to move from:
+
+> **"The server is broken."**
+
+to:
+
+> **"I can systematically investigate the symptoms, identify the root cause, fix the problem, and prevent it from happening again."**
+
+---
+
+## Repository Structure
+
+Since this entire section is located inside the main repository's `01-linux/` directory, avoid unnecessary directory nesting.
+
+A recommended structure is:
+
+```text
+01-linux/
+├── README.md
+│
+├── 01-linux-fundamentals/
+│   └── README.md
+│
+├── 02-essential-commands/
+│   └── README.md
+│
+├── 03-files-and-permissions/
+│   └── README.md
+│
+├── 04-processes/
+│   └── README.md
+│
+├── 05-shell-and-bash/
+│   └── README.md
+│
+├── 06-package-management/
+│   └── README.md
+│
+├── 07-networking/
+│   └── README.md
+│
+├── 08-storage/
+│   └── README.md
+│
+├── 09-system-management/
+│   └── README.md
+│
+├── 10-linux-internals/
+│   └── README.md
+│
+├── 11-linux-for-devops/
+│   └── README.md
+│
+├── 12-advanced-diagnostics/
+│   └── README.md
+│
+├── 13-advanced-storage/
+│   └── README.md
+│
+├── 14-security/
+│   └── README.md
+│
+├── 15-kernel-and-observability/
+│   └── README.md
+│
+└── 16-logging-and-auditing/
+    └── README.md
+```
+
+Use additional directories such as `labs/` and `scripts/` only where they provide value.
+
+For example:
+
+```text
+02-essential-commands/
+├── README.md
+└── scripts/
+
+05-shell-and-bash/
+├── README.md
+└── scripts/
+
+08-storage/
+├── README.md
+└── labs/
+
+11-linux-for-devops/
+├── README.md
+├── labs/
+└── scripts/
+```
+
+The objective is to keep the repository **simple, readable, and easy to maintain**.
 
 ---
 
@@ -363,6 +663,7 @@ cut
 sort
 uniq
 wc
+xargs
 
 Permissions
 -----------
@@ -394,6 +695,7 @@ wget
 dig
 ssh
 scp
+traceroute
 
 Storage
 -------
@@ -412,6 +714,36 @@ hostname
 uptime
 free
 vmstat
+
+Diagnostics
+-----------
+strace
+iostat
+sar
+
+Security
+--------
+iptables
+nft
+getenforce
+sestatus
+
+Storage Administration
+----------------------
+pvcreate
+vgcreate
+lvcreate
+lvextend
+
+Kernel
+------
+sysctl
+
+Logging
+-------
+logrotate
+auditctl
+ausearch
 
 Automation
 ----------
@@ -442,6 +774,26 @@ Troubleshoot a real problem
 Document the learning
 ```
 
+For advanced topics:
+
+```text
+Concept
+   ↓
+Understand the kernel/system behavior
+   ↓
+Learn the tool
+   ↓
+Reproduce the problem
+   ↓
+Investigate the problem
+   ↓
+Identify the root cause
+   ↓
+Fix the problem
+   ↓
+Document prevention
+```
+
 The objective is to move from:
 
 > **"I know this command."**
@@ -455,32 +807,53 @@ to:
 ## Recommended Progression
 
 ```text
-Linux Fundamentals
-        ↓
-Essential Commands
-        ↓
-Files & Permissions
-        ↓
-Processes & Jobs
-        ↓
-Shell & Bash
-        ↓
-Package Management
-        ↓
-Networking
-        ↓
-Storage & Filesystems
-        ↓
-System Management
-        ↓
-Linux Internals
-        ↓
-Linux for DevOps
+                    CORE LINUX
+                        │
+                        ▼
+              Linux Fundamentals
+                        ↓
+              Essential Commands
+                        ↓
+              Files & Permissions
+                        ↓
+               Processes & Jobs
+                        ↓
+                 Shell & Bash
+                        ↓
+              Package Management
+                        ↓
+                  Networking
+                        ↓
+              Storage & Filesystems
+                        ↓
+             System Management
+                        ↓
+                Linux Internals
+                        ↓
+               Linux for DevOps
+                        │
+                        ▼
+              PRODUCTION LINUX
+                        │
+          ┌─────────────┼─────────────┐
+          ↓             ↓             ↓
+   Diagnostics      Advanced      Security
+    & Tracing       Storage       & Access
+          │             │             │
+          └─────────────┼─────────────┘
+                        ↓
+             Kernel & Observability
+                        ↓
+               Logging & Auditing
 ```
+
+The **core topics should be completed first**. Advanced topics can then be studied progressively based on production and DevOps requirements.
 
 ---
 
 ## Completion Checklist
+
+### Core Linux
 
 * [ ] Linux fundamentals
 * [ ] Linux filesystem
@@ -503,3 +876,30 @@ Linux for DevOps
 * [ ] Linux for DevOps
 * [ ] Containers and Linux fundamentals
 * [ ] Practical Linux projects
+
+### Advanced & Production Linux
+
+* [ ] Advanced diagnostics
+* [ ] `strace`
+* [ ] `iostat`
+* [ ] `sar`
+* [ ] Advanced storage
+* [ ] LVM
+* [ ] NFS
+* [ ] SMB
+* [ ] SELinux
+* [ ] AppArmor
+* [ ] PAM
+* [ ] `iptables`
+* [ ] `nftables`
+* [ ] Linux firewall fundamentals
+* [ ] `sysctl`
+* [ ] Kernel tuning
+* [ ] File descriptor limits
+* [ ] TCP/kernel tuning
+* [ ] eBPF fundamentals
+* [ ] `logrotate`
+* [ ] `auditd`
+* [ ] Linux auditing
+* [ ] Production incident scenarios
+* [ ] Advanced Linux troubleshooting
